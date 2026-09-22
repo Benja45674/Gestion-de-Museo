@@ -1,0 +1,14 @@
+[
+  {
+    "identificador": 1,
+    "titulo": "Vistas y Paisajes del Mundo",
+    "salaAsignada": "Sala 1",
+    "periodoFechas": "Sep 15 - Nov 30"
+  },
+  {
+    "identificador": 2,
+    "titulo": "Grandes Maestros y Escultura",
+    "salaAsignada": "Sala 2",
+    "periodoFechas": "Oct 1 - Dic 20"
+  }
+]

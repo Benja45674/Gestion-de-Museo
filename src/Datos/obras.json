@@ -1,0 +1,56 @@
+[
+  {
+    "identificador": 1,
+    "titulo": "La gran ola de Kanagawa",
+    "artista": "Katsushika Hokusai",
+    "añoCreacion": "1831",
+    "categoria": "Pintura",
+    "descripcion": "Célebre estampa japonesa que representa una gigantesca ola amenazando embarcaciones frente al Monte Fuji.",
+    "enlaceImagen": "/obras/la-gran-ola.webp"
+  },
+  {
+    "identificador": 2,
+    "titulo": "La noche estrellada",
+    "artista": "Vincent van Gogh",
+    "añoCreacion": "1889",
+    "categoria": "Pintura",
+    "descripcion": "Vista nocturna famosa por sus pinceladas ondulantes y cielo en espiral sobre Saint-Rémy.",
+    "enlaceImagen": "/obras/la-noche-estrellada.webp"
+  },
+  {
+    "identificador": 3,
+    "titulo": "Caminante sobre el mar de nubes",
+    "artista": "Caspar David Friedrich",
+    "añoCreacion": "1818",
+    "categoria": "Paisaje",
+    "descripcion": "Obra maestra romántica que muestra a un viajero contemplando un denso mar de niebla entre montañas.",
+    "enlaceImagen": "/obras/caminante-mar-de-nubes.webp"
+  },
+  {
+    "identificador": 4,
+    "titulo": "El Pensador",
+    "artista": "Auguste Rodin",
+    "añoCreacion": "1904",
+    "categoria": "Escultura",
+    "descripcion": "Figura masculina de bronce en actitud reflexiva, símbolo universal del pensamiento.",
+    "enlaceImagen": "/obras/el-pensador.webp"
+  },
+  {
+    "identificador": 5,
+    "titulo": "Paisaje cerca de Amberes",
+    "artista": "Jan Wildens",
+    "añoCreacion": "1630",
+    "categoria": "Paisaje",
+    "descripcion": "Vista panorámica campestre que captura la luz natural y los caminos rurales flamencos.",
+    "enlaceImagen": "/obras/paisaje-amberes.webp"
+  },
+  {
+    "identificador": 6,
+    "titulo": "La Victoria de Samotracia",
+    "artista": "Autor Desconocido",
+    "añoCreacion": "190 a.C.",
+    "categoria": "Escultura",
+    "descripcion": "Monumento alado de mármol que representa a Niké, una de las obras cumbres del arte clásico.",
+    "enlaceImagen": "/obras/victoria-de-samotracia.webp"
+  }
+]
