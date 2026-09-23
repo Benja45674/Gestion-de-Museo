@@ -22,7 +22,6 @@ export default function TarjetaObra({ datosObra, estaEnFavoritos, funcionAlterna
         </button>
 
         <button
-          type="button"
           onClick={() => funcionAlternarFavorito(datosObra.identificador)}
           className="transition-transform"
         >

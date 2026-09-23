@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router';
 import LISTA_DE_OBRAS from './Datos/obras.json';
 import LISTA_DE_TarjetaExpo from './Datos/exposiciones.json';
