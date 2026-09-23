@@ -15,7 +15,7 @@ export default function Home({
 }) {
   return (
     <div>
-      <h2 className='text-center text-xl font-semibold text-gray-900"'>Obras</h2>
+      <h2 className="text-center text-xl font-semibold text-gray-900">Obras</h2>
 
       <FiltroCategorias
         listaCategorias={opcionesCategorias}

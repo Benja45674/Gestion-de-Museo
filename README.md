@@ -1,16 +1,35 @@
-# React + Vite
+# Gestión de Museo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web hecha en React para explorar el catálogo de un museo: buscar y filtrar obras, marcarlas como favoritas, ver su detalle y consultar las exposiciones vigentes.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Catálogo de obras con imagen, título, artista y categoría.
+- Búsqueda por título o artista.
+- Filtro por categoría.
+- Favoritos (marcar/desmarcar y ver solo las favoritas).
+- Vista de detalle de cada obra.
+- Exposiciones vigentes del museo.
+- Datos obtenidos mediante una petición simulada.
 
-## React Compiler
+## Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- React Router
+- Vite
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Cómo ejecutar el proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/Benja45674/Gestion-de-Museo.git
+cd Gestion-de-Museo
+npm install
+npm run dev
+```
+
+Luego abrir la dirección que muestre la terminal (por defecto `http://localhost:5173`).
+
+## Despliegue
+
+`https://gestion-de-museo.vercel.app/`

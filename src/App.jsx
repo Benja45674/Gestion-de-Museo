@@ -8,7 +8,6 @@ import Home from './paginas/Home';
 import Favoritos from './paginas/Favoritos';
 import logoGithub from './Icon/GitHub_Lockup_Black.svg';
 
-// Promesas simuladas para ambas fuentes de datos
 const obtenerObras = () =>
   new Promise((resolve) => setTimeout(() => resolve(LISTA_DE_OBRAS), 800));
 
@@ -17,7 +16,7 @@ const obtenerExposiciones = () =>
 
 export default function App() {
   const [listaObras, setListaObras] = useState([]);
-  const [listaExposiciones, setListaExposiciones] = useState([]); 
+  const [listaExposiciones, setListaExposiciones] = useState([]);
   const [cargando, setCargando] = useState(true);
   const [textoBusqueda, setTextoBusqueda] = useState('');
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todas');
@@ -44,14 +43,15 @@ export default function App() {
     setTextoBusqueda(texto);
     setCategoriaSeleccionada('Todas');
   };
-     
+
   const obrasPorBusqueda = listaObras.filter((obra) => {
     const texto = textoBusqueda.trim().toLowerCase();
     return (
-      obra.titulo.toLowerCase().includes(texto)
+      obra.titulo.toLowerCase().includes(texto) ||
+      obra.artista.toLowerCase().includes(texto)
     );
   });
-      
+
   const obrasFiltradas = obrasPorBusqueda.filter((obra) => {
     return (
       categoriaSeleccionada === 'Todas' ||
