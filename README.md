@@ -28,7 +28,7 @@ npm install
 npm run dev
 ```
 
-Luego abrir la dirección que muestre la terminal (por defecto `http://localhost:5173`).
+Luego abrir la dirección que muestre la terminal 
 
 ## Despliegue
 
