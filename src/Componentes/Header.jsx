@@ -9,7 +9,7 @@ export default function Header({ textoBusqueda, funcionCambiarBusqueda }) {
 
       <input
         type="text"
-        placeholder="Buscar obra o artista"
+        placeholder="Buscar obra"
         value={textoBusqueda}
         onChange={(evento) => funcionCambiarBusqueda(evento.target.value)}
         className="p-2 w-full md:w-64 border-b-2 border-stone-400 text-center text-stone-500 hover:border-stone-700 hover:text-stone-700 transition-colors outline-none"

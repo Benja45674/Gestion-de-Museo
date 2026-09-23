@@ -50,8 +50,7 @@ export default function App() {
   const obrasPorBusqueda = listaObras.filter((obra) => {
     const texto = textoBusqueda.trim().toLowerCase();
     return (
-      obra.titulo.toLowerCase().includes(texto) ||
-      obra.artista.toLowerCase().includes(texto)
+      obra.titulo.toLowerCase().includes(texto)
     );
   });
       
