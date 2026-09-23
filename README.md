@@ -32,4 +32,4 @@ Luego abrir la dirección que muestre la terminal
 
 ## Despliegue
 
-(https://gestion-de-museo.vercel.app/)
+https://gestion-de-museo.vercel.app/
