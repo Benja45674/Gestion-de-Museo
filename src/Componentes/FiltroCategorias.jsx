@@ -5,7 +5,7 @@ export default function FiltroCategorias({ listaCategorias, categoriaSeleccionad
         <button
           key={nombreCategoria} // Identificador requerido por React para listas
           onClick={() => funcionCambiarCategoria(nombreCategoria)} // Asigna la categoría tocada como la activa
-          className={`px-2 py-1 rounded-full border border-stone-300 ${categoriaSeleccionada === nombreCategoria ? 'bg-stone-300' : ''}`}
+          className={`px-2 py-1 rounded-full border border-stone-400 ${categoriaSeleccionada === nombreCategoria ? 'bg-stone-300' : ''}`}
         >
           {nombreCategoria} {/* Imprime el nombre del botón */}
         </button>

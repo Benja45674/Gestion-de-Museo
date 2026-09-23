@@ -1,8 +1,8 @@
-import IconoCorazon from "../Icon/IconoCorazon";
+import IconoFavorito from "../Icon/IconoFavorito";
 
 export default function TarjetaObra({ datosObra, estaEnFavoritos, funcionAlternarFavorito, funcionVerDetalle }) {
   return (
-    <div className="p-4 flex flex-col justify-between bg-white rounded-xl border border-stone-200">
+    <div className="p-4 flex flex-col justify-between bg-stone-100 rounded-xl border border-stone-300 shadow-lg ">
       <div>
         <img
           src={datosObra.enlaceImagen}
@@ -26,7 +26,7 @@ export default function TarjetaObra({ datosObra, estaEnFavoritos, funcionAlterna
           onClick={() => funcionAlternarFavorito(datosObra.identificador)}
           className="transition-transform"
         >
-          <IconoCorazon activo={estaEnFavoritos} />
+          <IconoFavorito activo={estaEnFavoritos} />
         </button>
       </div>
     </div>

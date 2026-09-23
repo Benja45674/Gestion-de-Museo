@@ -17,7 +17,7 @@ const obtenerExposiciones = () =>
 
 export default function App() {
   const [listaObras, setListaObras] = useState([]);
-  const [listaExposiciones, setListaExposiciones] = useState([]); // 1. Estado para las exposiciones
+  const [listaExposiciones, setListaExposiciones] = useState([]); 
   const [cargando, setCargando] = useState(true);
   const [textoBusqueda, setTextoBusqueda] = useState('');
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todas');
@@ -25,7 +25,6 @@ export default function App() {
   const [obraSeleccionadaParaDetalle, setObraSeleccionadaParaDetalle] = useState(null);
 
   useEffect(() => {
-    // 2. Espera a que ambas peticiones finalicen antes de apagar el cargando
     Promise.all([obtenerObras(), obtenerExposiciones()]).then(([obras, expos]) => {
       setListaObras(obras);
       setListaExposiciones(expos);
@@ -45,8 +44,7 @@ export default function App() {
     setTextoBusqueda(texto);
     setCategoriaSeleccionada('Todas');
   };
-
-  // 1. Búsqueda global por texto (título o artista)      
+     
   const obrasPorBusqueda = listaObras.filter((obra) => {
     const texto = textoBusqueda.trim().toLowerCase();
     return (
@@ -84,7 +82,7 @@ export default function App() {
                 listaIdentificadoresFavoritos={listaIdentificadoresFavoritos}
                 funcionAlternarFavorito={alternarFavorito}
                 funcionVerDetalle={setObraSeleccionadaParaDetalle}
-                listaTarjetaExpo={listaExposiciones} // 3. Se pasa la variable de estado en vez del JSON estático
+                listaTarjetaExpo={listaExposiciones}
               />
             }
           />
@@ -108,7 +106,7 @@ export default function App() {
         />
       )}
 
-      <footer className="mt-16 border-t border-stone-200 bg-white py-6 flex justify-center">
+      <footer className="mt-16 border-t-2 border-stone-300 bg-stone-100  py-6 flex justify-center">
         <a
           href="https://github.com/Benja45674?tab=repositories"
           target="GitHub"
