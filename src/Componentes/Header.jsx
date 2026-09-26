@@ -6,9 +6,9 @@ export default function Header({ textoBusqueda, onCambiarBusqueda }) {
   return (
     <header className="p-4 flex flex-col md:flex-row justify-between items-center bg-stone-100 border-b-2 border-stone-300 gap-4">
 
-      <p className="text-2xl font-bold">
+      <h1 className="text-2xl font-bold">
         <NavLink to="/">Museo de Bellas Artes</NavLink>
-      </p>
+      </h1>
 
       <search role="search" className="w-full md:w-64">
         <TextInput

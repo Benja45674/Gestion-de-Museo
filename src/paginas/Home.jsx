@@ -18,7 +18,7 @@ export default function Home({
     <div>
 
       <section>
-        <h1 className="text-center text-xl font-semibold text-gray-900">Obras</h1>
+        <h2 className="text-center text-xl font-semibold text-gray-900">Obras</h2>
 
         <FiltroCategorias
           listaCategorias={opcionesCategorias}
