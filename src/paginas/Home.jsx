@@ -1,57 +1,61 @@
 import FiltroCategorias from '../Componentes/FiltroCategorias';
 import TarjetaObra from '../Componentes/TarjetaObra';
 import TarjetaExpo from '../Componentes/TarjetaExpo';
+import EstadoLista from '../Componentes/EstadoLista';
 
 export default function Home({
   obrasVisibles,
   cargando,
   opcionesCategorias,
   categoriaSeleccionada,
-  funcionCambiarCategoria,
-  listaIdentificadoresFavoritos,
-  funcionAlternarFavorito,
-  funcionVerDetalle,
-  listaTarjetaExpo,
+  onCambiarCategoria,
+  LIstaFavoritos,
+  onAlternarFavorito,
+  onVerDetalle,
+  listaExposiciones,
 }) {
   return (
     <div>
-      <h2 className="text-center text-xl font-semibold text-gray-900">Obras</h2>
 
-      <FiltroCategorias
-        listaCategorias={opcionesCategorias}
-        categoriaSeleccionada={categoriaSeleccionada}
-        funcionCambiarCategoria={funcionCambiarCategoria}
-      />
+      <section>
+        <h1 className="text-center text-xl font-semibold text-gray-900">Obras</h1>
 
-      {cargando ? (
-        <p className="text-center py-8">Cargando obras...</p>
-      ) : obrasVisibles.length === 0 ? (
-        <p className="text-center py-8">No se encontraron obras.</p>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {obrasVisibles.map((obra) => (
-            <TarjetaObra
-              key={obra.identificador}
-              datosObra={obra}
-              estaEnFavoritos={listaIdentificadoresFavoritos.includes(obra.identificador)}
-              funcionAlternarFavorito={funcionAlternarFavorito}
-              funcionVerDetalle={funcionVerDetalle}
-            />
-          ))}
-        </div>
-      )}
+        <FiltroCategorias
+          listaCategorias={opcionesCategorias}
+          categoriaSeleccionada={categoriaSeleccionada}
+          onCambiarCategoria={onCambiarCategoria}
+        />
 
-      <section className="mt-12 pt-6">
-        <h2 className="mb-4 text-center text-xl font-semibold text-gray-900">Exposiciones Vigentes</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {listaTarjetaExpo.map((expo) => (
-            <TarjetaExpo
-              key={expo.identificador}
-              datosExpo={expo}
-            />
-          ))}
-        </div>
+        <EstadoLista cargando={cargando} datos={obrasVisibles}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {obrasVisibles.map((obra) => (
+              <TarjetaObra
+                key={obra.identificador}
+                obra={obra}
+                estaEnFavoritos={LIstaFavoritos.includes(obra.identificador)}
+                onAlternarFavorito={onAlternarFavorito}
+                onVerDetalle={onVerDetalle}
+              />
+            ))}
+          </div>
+        </EstadoLista>
       </section>
+      
+
+      <section>
+        <h2 className="my-6 text-center text-xl font-semibold text-gray-900">Exposiciones Vigentes</h2>
+        <EstadoLista cargando={cargando} datos={listaExposiciones}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {listaExposiciones.map((expo) => (
+              <TarjetaExpo
+                key={expo.identificador}
+                exposicion={expo}
+              />
+            ))}
+          </div>
+        </EstadoLista>
+      </section>
+
     </div>
   );
 }

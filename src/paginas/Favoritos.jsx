@@ -1,29 +1,29 @@
 import TarjetaObra from '../Componentes/TarjetaObra';
+import EstadoLista from '../Componentes/EstadoLista';
 
 export default function Favoritos({
   obrasFavoritas,
-  funcionAlternarFavorito,
-  funcionVerDetalle,
+  cargando,
+  onAlternarFavorito,
+  onVerDetalle,
 }) {
   return (
-    <div>
-      <h2 className='text-center text-xl font-semibold text-gray-900 '> Mis Favoritos</h2>
+    <section>
+      <h1 className="text-center text-xl font-semibold text-gray-900 mb-3 ">Mis Favoritos</h1>
 
-      {obrasFavoritas.length === 0 ? (
-        <p className="text-center py-8">No tienes obras agregadas a favoritos.</p>
-      ) : (
+      <EstadoLista cargando={cargando} datos={obrasFavoritas}>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {obrasFavoritas.map((obra) => (
             <TarjetaObra
               key={obra.identificador}
-              datosObra={obra}
+              obra={obra}
               estaEnFavoritos={true}
-              funcionAlternarFavorito={funcionAlternarFavorito}
-              funcionVerDetalle={funcionVerDetalle}
+              onAlternarFavorito={onAlternarFavorito}
+              onVerDetalle={onVerDetalle}
             />
           ))}
         </div>
-      )}
-    </div>
+      </EstadoLista>
+    </section>
   );
 }

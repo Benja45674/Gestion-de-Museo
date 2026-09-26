@@ -1,34 +1,60 @@
-import { useEffect, useRef } from 'react';
+import { Modal} from '@mantine/core';
+import { IconPalette, IconCalendar, IconUser } from '@tabler/icons-react';
 
 export default function Detalle({ obra, onClose }) {
-  const dialogRef = useRef(null);
-
-  useEffect(() => {
-    dialogRef.current?.showModal();
-  }, []);
+  if (!obra) return null;
 
   return (
-    <dialog
-      ref={dialogRef}
+    <Modal
+      opened={Boolean(obra)}
       onClose={onClose}
-      className="p-6 max-w-md w-full rounded-xl bg-white m-auto"
+      title={<span className="font-bold text-xl">{obra.titulo}</span>}
+      centered
+      radius="md"
     >
-      <img
-        src={obra.enlaceImagen}
-        alt={obra.titulo}
-        className="w-full mb-4 rounded-xl"
-      />
-      <h2 className="text-xl/6 font-bold">{obra.titulo}</h2>
-      <p className="text-sm/6 text-gray-600">{obra.artista} ({obra.añoCreacion})</p>
-      <p className="text-xs/6 text-gray-400 uppercase border px-2 inline-block rounded-2xl">{obra.categoria}</p>
-      <p className="text-sm/6 text-gray-700">{obra.descripcion}</p>
+      <div className="flex flex-col gap-4">
+        <figure>
+          <img
+            src={obra.enlaceImagen}
+            alt={`Obra ${obra.titulo} de ${obra.artista}`}
+            loading="lazy"
+            decoding="async"
+            className="max-h-72 w-auto mx-auto rounded-xl"
+          />
+        </figure>
 
-      <button
-        onClick={onClose}
-        className="mt-4 py-2 w-full bg-stone-900 text-white rounded-lg"
-      >
-        Cerrar
-      </button>
-    </dialog>
+        <dl className="bg-stone-100 p-3 rounded-xl divide-y divide-stone-200">
+          <div className="flex justify-between items-center py-1">
+            <dt className="flex items-center gap-2 text-stone-500 text-sm">
+              <IconUser size={18} /> Artista
+            </dt>
+            <dd className="font-semibold text-stone-900">{obra.artista}</dd>
+          </div>
+
+          <div className="flex justify-between items-center py-1">
+            <dt className="flex items-center gap-2 text-stone-500 text-sm">
+              <IconCalendar size={18} /> Año
+            </dt>
+            <dd className="font-semibold text-stone-900">{obra.añoCreacion}</dd>
+          </div>
+
+          <div className="flex justify-between items-center py-1">
+            <dt className="flex items-center gap-2 text-stone-500 text-sm">
+              <IconPalette size={18} /> Categoría
+            </dt>
+            <dd className="font-semibold text-stone-900">{obra.categoria}</dd>
+          </div>
+        </dl>
+
+        <div>
+          <h3 className="text-xs uppercase font-semibold text-stone-400 mb-1">
+            Acerca de la obra
+          </h3>
+          <p className="text-sm leading-relaxed text-stone-700">
+            {obra.descripcion}
+          </p>
+        </div>
+      </div>
+    </Modal>
   );
 }

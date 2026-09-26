@@ -1,27 +1,28 @@
 import { NavLink } from 'react-router';
-import IconoLupa from '../Icon/IconoLupa';
+import { TextInput } from '@mantine/core';
+import { IconSearch } from '@tabler/icons-react';
 
-export default function Header({ textoBusqueda, funcionCambiarBusqueda }) {
+export default function Header({ textoBusqueda, onCambiarBusqueda }) {
   return (
-    <header className="p-4 flex flex-col md:flex-row justify-between items-center bg-stone-100 border-b-2 border-stone-300">
-      <NavLink to="/" className="text-2xl">
-        Museo de Bellas Artes
-      </NavLink>
+    <header className="p-4 flex flex-col md:flex-row justify-between items-center bg-stone-100 border-b-2 border-stone-300 gap-4">
 
-      <div className="relative w-full md:w-64">
-        <input
-          type="text"
+      <p className="text-2xl font-bold">
+        <NavLink to="/">Museo de Bellas Artes</NavLink>
+      </p>
+
+      <search role="search" className="w-full md:w-64">
+        <TextInput
+          id="busqueda"
+          name="busqueda"
           placeholder="Buscar obra o artista"
           value={textoBusqueda}
-          onChange={(evento) => funcionCambiarBusqueda(evento.target.value)}
-          className="w-full bg-white border border-stone-300 rounded-full px-3 py-1 outline-none"
+          onChange={(evento) => onCambiarBusqueda(evento.currentTarget.value)}
+          rightSection={<IconSearch size={18} stroke={1.5} className="text-stone-500" />}
+          radius="xl"
         />
-        <div className="absolute right-2.5 top-1/2 -translate-y-1/2 ">
-          <IconoLupa />
-        </div>
-      </div>
+      </search>
 
-      <div className="flex gap-2 text-stone-500">
+      <nav className="flex gap-2 text-stone-500">
         <NavLink
           to="/"
           end
@@ -35,7 +36,7 @@ export default function Header({ textoBusqueda, funcionCambiarBusqueda }) {
         >
           Mis favoritos
         </NavLink>
-      </div>
+      </nav>
     </header>
   );
 }
