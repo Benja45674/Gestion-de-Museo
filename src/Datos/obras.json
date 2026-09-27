@@ -19,12 +19,12 @@
   },
   {
     "identificador": 3,
-    "titulo": "Caminante sobre el mar de nubes",
-    "artista": "Caspar David Friedrich",
-    "añoCreacion": "1818",
+    "titulo": "Noche estrellada sobre el Ródano",
+    "artista": "Vincent van Gogh",
+    "añoCreacion": "1888",
     "categoria": "Paisaje",
-    "descripcion": "Obra maestra romántica que muestra a un viajero contemplando un denso mar de niebla entre montañas.",
-    "enlaceImagen": "/obras/caminante-mar-de-nubes.webp"
+    "descripcion": "Vista nocturna del río Ródano en Arlés que resalta el reflejo dorado de las luces de gas en el agua oscura bajo un cielo estrellado con la Osa Mayor.",
+    "enlaceImagen": "/obras/Starry_Night_Over_the_Rhone.jpg"
   },
   {
     "identificador": 4,
@@ -37,12 +37,12 @@
   },
   {
     "identificador": 5,
-    "titulo": "Paisaje cerca de Amberes",
-    "artista": "Jan Wildens",
-    "añoCreacion": "1630",
+    "titulo": "Caminante sobre el mar de nubes",
+    "artista": "Caspar David Friedrich",
+    "añoCreacion": "1818",
     "categoria": "Paisaje",
-    "descripcion": "Vista panorámica campestre que captura la luz natural y los caminos rurales flamencos.",
-    "enlaceImagen": "/obras/paisaje-amberes.webp"
+    "descripcion": "Obra maestra romántica que muestra a un viajero contemplando un denso mar de niebla entre montañas.",
+    "enlaceImagen": "/obras/caminante-mar-de-nubes.webp"
   },
   {
     "identificador": 6,

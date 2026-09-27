@@ -4,9 +4,8 @@ import TarjetaExpo from '../Componentes/TarjetaExpo';
 import EstadoLista from '../Componentes/EstadoLista';
 
 export default function Home({
-  obrasVisibles,
+obrasVisibles,
   cargando,
-  opcionesCategorias,
   categoriaSeleccionada,
   onCambiarCategoria,
   LIstaFavoritos,
@@ -17,11 +16,10 @@ export default function Home({
   return (
     <div>
 
-      <section>
-        <h2 className="text-center text-xl font-semibold text-gray-900">Obras</h2>
+      <section className="flex flex-col gap-4">
+        <h2 className="text-center text-xl font-semibold text-gray-900">Colección Permanente</h2>
 
         <FiltroCategorias
-          listaCategorias={opcionesCategorias}
           categoriaSeleccionada={categoriaSeleccionada}
           onCambiarCategoria={onCambiarCategoria}
         />

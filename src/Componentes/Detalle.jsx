@@ -10,36 +10,37 @@ export default function Detalle({ obra, onClose }) {
       onClose={onClose}
       title={<span className="font-bold text-xl">{obra.titulo}</span>}
       centered
-      radius="md"
+      radius="lg"
+      size="md"
     >
       <div className="flex flex-col gap-4">
         <figure>
           <img
             src={obra.enlaceImagen}
-            alt={`Obra ${obra.titulo} de ${obra.artista}`}
+            alt={obra.titulo}
             loading="lazy"
             decoding="async"
-            className="max-h-72 w-auto mx-auto rounded-xl"
+            className="w-full h-auto rounded-lg object-contain"
           />
         </figure>
 
-        <dl className="bg-stone-100 p-3 rounded-xl divide-y divide-stone-200">
-          <div className="flex justify-between items-center py-1">
-            <dt className="flex items-center gap-2 text-stone-500 text-sm">
+        <dl className="bg-stone-200/60 p-4 rounded-xl divide-y divide-stone-300">
+          <div className="flex justify-between items-center py-2">
+            <dt className="flex items-center gap-2 text-stone-700 text-sm">
               <IconUser size={18} /> Artista
             </dt>
             <dd className="font-semibold text-stone-900">{obra.artista}</dd>
           </div>
 
-          <div className="flex justify-between items-center py-1">
-            <dt className="flex items-center gap-2 text-stone-500 text-sm">
+          <div className="flex justify-between items-center py-2">
+            <dt className="flex items-center gap-2 text-stone-700 text-sm">
               <IconCalendar size={18} /> Año
             </dt>
             <dd className="font-semibold text-stone-900">{obra.añoCreacion}</dd>
           </div>
 
-          <div className="flex justify-between items-center py-1">
-            <dt className="flex items-center gap-2 text-stone-500 text-sm">
+          <div className="flex justify-between items-center py-2">
+            <dt className="flex items-center gap-2 text-stone-700 text-sm">
               <IconPalette size={18} /> Categoría
             </dt>
             <dd className="font-semibold text-stone-900">{obra.categoria}</dd>
@@ -47,7 +48,7 @@ export default function Detalle({ obra, onClose }) {
         </dl>
 
         <div>
-          <h3 className="text-xs uppercase font-semibold text-stone-400 mb-1">
+          <h3 className="text-sm uppercase font-semibold text-stone-700 mb-2">
             Acerca de la obra
           </h3>
           <p className="text-sm leading-relaxed text-stone-700">

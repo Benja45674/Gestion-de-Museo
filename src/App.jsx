@@ -5,7 +5,7 @@ import Header from './Componentes/Header';
 import Detalle from './Componentes/Detalle';
 import Home from './paginas/Home';
 import Favoritos from './paginas/Favoritos';
-import logoGithub from './Icon/GitHub_Lockup_Black.svg';
+import Footer from './Componentes/Footer';
 
 export default function App() {
   const [obras, setObras] = useState([]);
@@ -33,8 +33,6 @@ export default function App() {
     );
   };
 
-  const opcionesCategorias = ['Todas', 'Pintura', 'Escultura', 'Paisaje'];
-
   const manejarBusqueda = (texto) => {
     setTextoBusqueda(texto);
     setCategoriaSeleccionada('Todas');
@@ -60,12 +58,13 @@ export default function App() {
   );
 
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen bg-stone-200 ">
       <Header
         textoBusqueda={textoBusqueda}
         onCambiarBusqueda={manejarBusqueda}
+        onLimpiarBusqueda={() => setTextoBusqueda('')}
       />
-      <main className="p-4 max-w-5xl mx-auto w-full flex-grow">
+      <main className="px-4 py-6 max-w-5xl mx-auto w-full flex-grow">
         <Routes>
           <Route
             path="/"
@@ -73,7 +72,6 @@ export default function App() {
               <Home
                 obrasVisibles={obrasFiltradas}
                 cargando={cargando}
-                opcionesCategorias={opcionesCategorias}
                 categoriaSeleccionada={categoriaSeleccionada}
                 onCambiarCategoria={setCategoriaSeleccionada}
                 LIstaFavoritos={LIstaFavoritos}
@@ -104,15 +102,7 @@ export default function App() {
         />
       )}
 
-      <footer className="mt-16 border-t-2 border-stone-300 bg-stone-100  py-6 flex justify-center">
-        <a
-          href="https://github.com/Benja45674?tab=repositories"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={logoGithub} alt="GitHub" className="h-6 w-auto" />
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }

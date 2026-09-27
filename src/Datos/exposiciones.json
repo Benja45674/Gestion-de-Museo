@@ -1,14 +1,18 @@
 [
   {
     "identificador": 1,
-    "titulo": "Vistas y Paisajes del Mundo",
+    "titulo": "Expresionismo Abstracto y Color",
     "salaAsignada": "Sala 1",
-    "periodoFechas": "Sep 15 - Nov 30"
+    "periodoFechas": "Sep 15 - Nov 30",
+    "imagen": "/obras/arte-abstracto.webp",
+    "descripcion": "Muestra centrada en el dinamismo del gesto, capas pictóricas y la fuerza expresiva del color contemporáneo."
   },
   {
     "identificador": 2,
     "titulo": "Grandes Maestros y Escultura",
     "salaAsignada": "Sala 2",
-    "periodoFechas": "Oct 1 - Dic 20"
+    "periodoFechas": "Oct 1 - Dic 20",
+    "imagen": "/obras/Veiled_virgin.jpg",
+    "descripcion": "Una exploración del volumen, la anatomía y el detalle en mármol y bronce a través de obras maestras universales."
   }
 ]

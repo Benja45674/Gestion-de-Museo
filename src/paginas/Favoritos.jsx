@@ -8,8 +8,8 @@ export default function Favoritos({
   onVerDetalle,
 }) {
   return (
-    <section>
-      <h2 className="text-center text-xl font-semibold text-gray-900 mb-3 ">Mis Favoritos</h2>
+    <section className="flex flex-col gap-4">
+      <h2 className="text-center text-xl font-semibold text-gray-900">Mis Favoritos</h2>
 
       <EstadoLista cargando={cargando} datos={obrasFavoritas}>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
