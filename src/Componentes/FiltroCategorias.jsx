@@ -11,8 +11,10 @@ export default function FiltroCategorias({ categoriaSeleccionada,
         value={categoriaSeleccionada}
         onChange={onCambiarCategoria}
         radius="xl"
-        color="dark"
-        className="!bg-stone-100 border border-stone-400"
+        color="#cdc6b8"
+        autoContrast
+
+        className="!bg-[#ece8e1] border border-[#ded9cf]"
         withItemsBorders={false}
       />
     </div>

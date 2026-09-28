@@ -58,7 +58,7 @@ export default function App() {
   );
 
   return (
-    <div className="flex flex-col min-h-screen bg-stone-200 ">
+    <div className="flex flex-col min-h-screen bg-[#f6f4f0]">
       <Header
         textoBusqueda={textoBusqueda}
         onCambiarBusqueda={manejarBusqueda}

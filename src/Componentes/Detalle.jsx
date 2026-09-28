@@ -12,6 +12,11 @@ export default function Detalle({ obra, onClose }) {
       centered
       radius="lg"
       size="md"
+      styles={{
+        content: { backgroundColor: '#ffffff' },
+        header: { backgroundColor: '#ffffff' },
+        close: { color: '#938a7f' },
+      }}
     >
       <div className="flex flex-col gap-4">
         <figure>
@@ -24,7 +29,7 @@ export default function Detalle({ obra, onClose }) {
           />
         </figure>
 
-        <dl className="bg-stone-200/60 p-4 rounded-xl divide-y divide-stone-300">
+        <dl className="bg-[#ece8e1] p-4 rounded-xl divide-y divide-[#ded9cf]">
           <div className="flex justify-between items-center py-2">
             <dt className="flex items-center gap-2 text-stone-700 text-sm">
               <IconUser size={18} /> Artista

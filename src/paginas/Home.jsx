@@ -17,7 +17,7 @@ export default function Home({
     <div>
 
       <section className="flex flex-col gap-4">
-        <h2 className="text-center text-xl font-semibold text-gray-900">Colección Permanente</h2>
+        <h2 className="text-center text-2xl font-semibold text-gray-900">Colección Permanente</h2>
 
         <FiltroCategorias
           categoriaSeleccionada={categoriaSeleccionada}
@@ -41,7 +41,7 @@ export default function Home({
 
 
       <section>
-        <h2 className="my-6 text-center text-xl font-semibold text-gray-900">Exposiciones Vigentes</h2>
+        <h2 className="my-6 text-center text-2xl font-semibold text-gray-900">Exposiciones Vigentes</h2>
         <EstadoLista cargando={cargando} datos={listaExposiciones}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {listaExposiciones.map((expo) => (

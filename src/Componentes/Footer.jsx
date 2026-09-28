@@ -2,7 +2,7 @@ import logoGithub from '../Icon/GitHub_Lockup_Black.svg';
 
 export default function Footer() {
   return (
-    <footer className="p-6 border-t-2 border-stone-300 bg-stone-100/90 flex justify-center">
+    <footer className="p-6 border-t-2 border-[#ded9cf] bg-[#ece8e1] flex justify-center">
       <a
         href="https://github.com/Benja45674?tab=repositories"
         target="_blank"
