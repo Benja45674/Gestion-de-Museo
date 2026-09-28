@@ -29,7 +29,7 @@ export default function Header({ textoBusqueda, onCambiarBusqueda, onLimpiarBusq
           end
           className={({ isActive }) => `px-3 py-1 transition-colors ${isActive ? 'text-black' : 'hover:text-black'}`}
         >
-          Obras
+          Inicio
         </NavLink>
         <NavLink
           to="/favoritos"

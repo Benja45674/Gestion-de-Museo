@@ -4,7 +4,7 @@ import TarjetaExpo from '../Componentes/TarjetaExpo';
 import EstadoLista from '../Componentes/EstadoLista';
 
 export default function Home({
-obrasVisibles,
+  obrasVisibles,
   cargando,
   categoriaSeleccionada,
   onCambiarCategoria,
@@ -38,7 +38,7 @@ obrasVisibles,
           </div>
         </EstadoLista>
       </section>
-      
+
 
       <section>
         <h2 className="my-6 text-center text-xl font-semibold text-gray-900">Exposiciones Vigentes</h2>
