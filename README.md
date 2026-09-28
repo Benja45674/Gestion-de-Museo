@@ -18,6 +18,7 @@ Aplicación web hecha en React para explorar el catálogo de un museo: buscar y 
 - React Router
 - Vite
 - Tailwind CSS
+- Mantine
 
 ## Cómo ejecutar el proyecto
 
