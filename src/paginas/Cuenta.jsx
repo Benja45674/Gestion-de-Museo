@@ -5,7 +5,7 @@ export default function Cuenta({ usuario, cargando }) {
     <EstadoLista cargando={cargando} datos={usuario}>
       <article className="max-w-xl mx-auto bg-white rounded-2xl border border-[#ded9cf] shadow-md p-6 sm:p-8">
         <h2 className="text-center text-2xl font-serif font-bold text-gray-900 border-b border-[#ded9cf] pb-4">
-          Mi Cuenta
+          Mi perfil
         </h2>
 
         <div className="divide-y divide-[#ded9cf] mt-2">
