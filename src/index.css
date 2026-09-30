@@ -1,0 +1,41 @@
+:root {
+  --font-serif: "Playfair Display", serif;
+}
+
+body {
+  font-family: "Playfair Display", serif !important;
+  background-color: #f6f4f0;
+}
+
+.mantine-Modal-content {
+  overflow-y: auto !important;
+  max-height: calc(100vh - 3rem);
+}
+
+.mantine-Modal-body::-webkit-scrollbar,
+.mantine-Modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mantine-Modal-body::-webkit-scrollbar-track,
+.mantine-Modal-content::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 12px 0;
+}
+
+.mantine-Modal-body::-webkit-scrollbar-thumb,
+.mantine-Modal-content::-webkit-scrollbar-thumb {
+  background-color: #ded9cf;
+  border-radius: 9999px;
+}
+
+.mantine-Modal-body::-webkit-scrollbar-thumb:hover,
+.mantine-Modal-content::-webkit-scrollbar-thumb:hover {
+  background-color: #b8b0a2;
+}
+
+.mantine-Modal-body,
+.mantine-Modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: #ded9cf transparent;
+}

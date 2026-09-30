@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router';
+import { notifications } from '@mantine/notifications';
+import { IconBookmark } from '@tabler/icons-react';
 import api from './api/client.js';
 import Header from './Componentes/Header';
 import Detalle from './Componentes/Detalle';
 import Home from './paginas/Home';
 import Favoritos from './paginas/Favoritos';
+import Cuenta from './paginas/Cuenta';
 import Footer from './Componentes/Footer';
 
 export default function App() {
   const [obras, setObras] = useState([]);
   const [exposiciones, setExposiciones] = useState([]);
+  const [usuario, setUsuario] = useState(null);
   const [cargando, setCargando] = useState(true);
   const [textoBusqueda, setTextoBusqueda] = useState('');
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todas');
@@ -19,7 +23,7 @@ export default function App() {
   useEffect(() => {
     Promise.all([
       api.get('/getobras'),
-      api.get('/getexposiciones')
+      api.get('/getexposiciones'),
     ]).then(([obrasRecibidas, exposRecibidas]) => {
       setObras(obrasRecibidas);
       setExposiciones(exposRecibidas);
@@ -27,7 +31,30 @@ export default function App() {
     });
   }, []);
 
+  const manejarLogin = () => {
+    api.get('/getusuario').then((usuarioRecibido) => {
+      setUsuario(usuarioRecibido);
+      setLIstaFavoritos(usuarioRecibido?.favoritos || []);
+    });
+  };
+
+  const manejarLogout = () => {
+    setUsuario(null);
+    setLIstaFavoritos([]);
+  };
+
   const alternarFavorito = (id) => {
+    if (!usuario) {
+      notifications.show({
+        title: 'Inicio de sesión requerido',
+        message: 'Debes iniciar sesión para agregar obras a tus favoritos.',
+        color: 'red',
+        icon: <IconBookmark size={16} />,
+        autoClose: 3500,
+      });
+      return;
+    }
+
     setLIstaFavoritos((anterior) =>
       anterior.includes(id) ? anterior.filter((f) => f !== id) : [...anterior, id]
     );
@@ -63,6 +90,9 @@ export default function App() {
         textoBusqueda={textoBusqueda}
         onCambiarBusqueda={manejarBusqueda}
         onLimpiarBusqueda={() => setTextoBusqueda('')}
+        usuario={usuario}
+        onLogin={manejarLogin}
+        onLogout={manejarLogout}
       />
       <main className="px-4 py-6 max-w-5xl mx-auto w-full flex-grow">
         <Routes>
@@ -89,6 +119,15 @@ export default function App() {
                 cargando={cargando}
                 onAlternarFavorito={alternarFavorito}
                 onVerDetalle={setObraSeleccionada}
+              />
+            }
+          />
+          <Route
+            path="/cuenta"
+            element={
+              <Cuenta
+                usuario={usuario}
+                cargando={cargando}
               />
             }
           />

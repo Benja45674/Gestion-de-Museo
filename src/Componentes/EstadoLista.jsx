@@ -4,7 +4,7 @@ export default function EstadoLista({ cargando, datos, children }) {
   if (cargando) {
     return (
       <div className="flex justify-center py-8">
-        <Loader color="#2c2825" size="md" type='dots' />
+        <Loader color="#2c2825" size="md" type="dots" />
       </div>
     );
   }

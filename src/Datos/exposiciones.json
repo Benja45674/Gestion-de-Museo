@@ -4,8 +4,34 @@
     "titulo": "Expresionismo Abstracto y Color",
     "salaAsignada": "Sala 1",
     "periodoFechas": "Sep 15 - Nov 30",
-    "imagen": "/obras/arte-abstracto.webp",
-    "descripcion": "Muestra centrada en el dinamismo del gesto, capas pictóricas y la fuerza expresiva del color contemporáneo."
+    "imagen": "/obras/Mountains and Sea.jpg",
+    "descripcion": "Muestra dedicada a la fuerza gestual, la energía del trazo y la profundidad emocional de los grandes campos cromáticos del siglo XX.",
+    "obras": [
+      {
+        "titulo": "Blue Poles",
+        "artista": "Jackson Pollock",
+        "añoCreacion": "1952",
+        "categoria": "Pintura",
+        "enlaceImagen": "/obras/Blue-Poles.jpg",
+        "descripcion": "Composición monumental cargada de ritmo y dramatismo, donde líneas diagonales de azul intenso atraviesan un laberinto enérgico de pintura vertida."
+      },
+      {
+        "titulo": "White Center (Yellow, Pink and Lavender on Rose)",
+        "artista": "Mark Rothko",
+        "añoCreacion": "1950",
+        "categoria": "Pintura",
+        "enlaceImagen": "/obras/white center.jpeg",
+        "descripcion": "Sutil y luminosa sinfonía cromática compuesta por bandas flotantes de rosa, lavanda y amarillo en torno a un núcleo blanco de atmósfera etérea."
+      },
+      {
+        "titulo": "Mountains and Sea",
+        "artista": "Helen Frankenthaler",
+        "añoCreacion": "1952",
+        "categoria": "Pintura",
+        "enlaceImagen": "/obras/Mountains and Sea.jpg",
+        "descripcion": "Paisaje abstracto lírico creado con pigmentos diluidos que se funden directamente sobre el lienzo crudo, simulando aguadas acuareladas de gran delicadeza."
+      }
+    ]
   },
   {
     "identificador": 2,
@@ -13,6 +39,32 @@
     "salaAsignada": "Sala 2",
     "periodoFechas": "Oct 1 - Dic 20",
     "imagen": "/obras/Veiled_virgin.jpg",
-    "descripcion": "Una exploración del volumen, la anatomía y el detalle en mármol y bronce a través de obras maestras universales."
+    "descripcion": "Una exploración del volumen, la anatomía y el detalle en mármol y bronce a través de obras maestras universales.",
+    "obras": [
+      {
+        "titulo": "La Virgen Velada",
+        "artista": "Giovanni Strazza",
+        "añoCreacion": "c. 1850",
+        "categoria": "Escultura",
+        "enlaceImagen": "/obras/Veiled_virgin.jpg",
+        "descripcion": "Virtuosismo en mármol de Carrara que logra la ilusión de un velo translúcido sobre el rostro con un modelado extremadamente delicado."
+      },
+      {
+        "titulo": "Moisés",
+        "artista": "Miguel Ángel",
+        "añoCreacion": "1513-1515",
+        "categoria": "Escultura",
+        "enlaceImagen": "/obras/moises.jpeg",
+        "descripcion": "Obra colosal del Renacimiento en mármol blanco, célebre por su mirada imponente, el dinamismo de la barba y la fuerza anatómica de la 'terribilità'."
+      },
+      {
+        "titulo": "El Vals",
+        "artista": "Camille Claudel",
+        "añoCreacion": "1893",
+        "categoria": "Escultura",
+        "enlaceImagen": "/obras/el vals.jpeg",
+        "descripcion": "Obra maestra en bronce que desafía la gravedad, capturando el movimiento apasionado y el torbellino dramático de los pliegues de dos amantes danzando."
+      }
+    ]
   }
 ]

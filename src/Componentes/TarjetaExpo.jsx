@@ -1,6 +1,6 @@
-export default function TarjetaExpo({ exposicion }) {
+export default function TarjetaExpo({ exposicion, onVerDetalleExpo }) {
   return (
-    <article className="flex flex-col sm:flex-row bg-white rounded-xl border border-[#ded9cf] shadow-lg overflow-hidden">
+    <article className="flex flex-col sm:flex-row bg-white rounded-xl border border-[#ded9cf] shadow-lg overflow-hidden hover:-translate-y-1 hover:shadow-xl hover:border-stone-400 transition-all duration-300">
       <img
         src={exposicion.imagen}
         alt={exposicion.titulo}
@@ -15,9 +15,18 @@ export default function TarjetaExpo({ exposicion }) {
             <p className="text-sm text-gray-600">{exposicion.descripcion}</p>
           )}
         </div>
-        <p className="text-sm text-gray-800 py-0.5 inline-flex items-center uppercase border border-[#ded9cf] bg-[#ece8e1] px-2 self-start gap-1 rounded-2xl">
-          Fecha: <time>{exposicion.periodoFechas}</time>
-        </p>
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <p className="text-sm text-gray-800 py-0.5 inline-flex items-center uppercase border border-[#ded9cf] bg-[#ece8e1] px-2 self-start gap-1 rounded-2xl">
+            Fecha: <time>{exposicion.periodoFechas}</time>
+          </p>
+          <button
+            type="button"
+            onClick={() => onVerDetalleExpo?.(exposicion)}
+            className="text-xs font-semibold text-stone-700 hover:text-black underline underline-offset-4 cursor-pointer transition-colors"
+          >
+            Ver Detalles
+          </button>
+        </div>
       </div>
     </article>
   );

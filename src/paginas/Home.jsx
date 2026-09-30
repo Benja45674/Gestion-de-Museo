@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import FiltroCategorias from '../Componentes/FiltroCategorias';
 import TarjetaObra from '../Componentes/TarjetaObra';
 import TarjetaExpo from '../Componentes/TarjetaExpo';
+import DetalleExpo from '../Componentes/DetalleExpo';
 import EstadoLista from '../Componentes/EstadoLista';
 
 export default function Home({
@@ -13,9 +15,10 @@ export default function Home({
   onVerDetalle,
   listaExposiciones,
 }) {
+  const [expoSeleccionada, setExpoSeleccionada] = useState(null);
+
   return (
     <div>
-
       <section className="flex flex-col gap-4">
         <h2 className="text-center text-2xl font-semibold text-gray-900">Colección Permanente</h2>
 
@@ -39,7 +42,6 @@ export default function Home({
         </EstadoLista>
       </section>
 
-
       <section>
         <h2 className="my-6 text-center text-2xl font-semibold text-gray-900">Exposiciones Vigentes</h2>
         <EstadoLista cargando={cargando} datos={listaExposiciones}>
@@ -48,12 +50,19 @@ export default function Home({
               <TarjetaExpo
                 key={expo.identificador}
                 exposicion={expo}
+                onVerDetalleExpo={setExpoSeleccionada}
               />
             ))}
           </div>
         </EstadoLista>
       </section>
 
+      {expoSeleccionada && (
+        <DetalleExpo
+          exposicion={expoSeleccionada}
+          onClose={() => setExpoSeleccionada(null)}
+        />
+      )}
     </div>
   );
 }

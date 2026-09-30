@@ -1,4 +1,4 @@
-import { Modal} from '@mantine/core';
+import { Modal } from '@mantine/core';
 import { IconPalette, IconCalendar, IconUser } from '@tabler/icons-react';
 
 export default function Detalle({ obra, onClose }) {
@@ -12,11 +12,6 @@ export default function Detalle({ obra, onClose }) {
       centered
       radius="lg"
       size="md"
-      styles={{
-        content: { backgroundColor: '#ffffff' },
-        header: { backgroundColor: '#ffffff' },
-        close: { color: '#938a7f' },
-      }}
     >
       <div className="flex flex-col gap-4">
         <figure>
