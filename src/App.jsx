@@ -34,7 +34,8 @@ export default function App() {
   const manejarLogin = () => {
     api.get('/getusuario').then((usuarioRecibido) => {
       setUsuario(usuarioRecibido);
-      setLIstaFavoritos(usuarioRecibido?.favoritos || []);
+      const guardados = localStorage.getItem('favoritos');
+      setLIstaFavoritos(guardados !== null ? JSON.parse(guardados) : (usuarioRecibido?.favoritos || []));
     });
   };
 
@@ -55,9 +56,13 @@ export default function App() {
       return;
     }
 
-    setLIstaFavoritos((anterior) =>
-      anterior.includes(id) ? anterior.filter((f) => f !== id) : [...anterior, id]
-    );
+    setLIstaFavoritos((anterior) => {
+      const nuevaLista = anterior.includes(id)
+        ? anterior.filter((f) => f !== id)
+        : [...anterior, id];
+      localStorage.setItem('favoritos', JSON.stringify(nuevaLista));
+      return nuevaLista;
+    });
   };
 
   const manejarBusqueda = (texto) => {
